@@ -1,0 +1,27 @@
+{
+  "_readme": "Replace YOUR_USERNAME with your Windows username in all paths below",
+  "hooks": {
+    "Stop": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "powershell.exe -NonInteractive -File \"C:\\Users\\YOUR_USERNAME\\.claude\\hooks\\notify.ps1\" -Message \"Claude Code finished the task\""
+          }
+        ]
+      }
+    ],
+    "Notification": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "powershell.exe -NonInteractive -File \"C:\\Users\\YOUR_USERNAME\\.claude\\hooks\\notify.ps1\" -Message \"Claude Code needs your input\""
+          }
+        ]
+      }
+    ]
+  }
+}
